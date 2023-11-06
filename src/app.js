@@ -40,3 +40,30 @@ export const getTotal = (items = [], discount = 0) => {
   }, 0);
   return total - (total * discount) / 100;
 };
+
+// eslint-disable-next-line no-unused-vars
+// const object = {
+//   AlexPo: 5,
+//   PoAlex: 3,
+// };
+
+// export function getScore(object) {
+//   const a = object.AlexPo;
+//   const b = object.PoAlex;
+//   const sum = a + b;
+//   return sum;
+// }
+
+export function getScore(object) {
+  let array = [];
+  let sumScore = 0;
+  for (let key in object) {
+    let a = object[key];
+    array.unshift(a);
+  }
+  array.forEach(function (arr) {
+    sumScore += arr;
+  });
+  // array.map((item) => (sumScore += item));
+  console.log(sumScore);
+}
