@@ -40,3 +40,18 @@ export const getTotal = (items = [], discount = 0) => {
   }, 0);
   return total - (total * discount) / 100;
 };
+
+/** Функция подсчета успеваемости */
+
+export function getScore(object) {
+  let array = [];
+  let sumScore = 0;
+  for (let key in object) {
+    let a = object[key];
+    array.unshift(a);
+  }
+  array.forEach(function (arr) {
+    sumScore += arr;
+  });
+  return sumScore;
+}
