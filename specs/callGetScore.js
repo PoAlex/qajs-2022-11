@@ -14,4 +14,4 @@ const object = {
 // console.log(res);
 
 const result = getScore(object);
-console.log(result);
+console.log("Сумма всех баллов: " + result);
